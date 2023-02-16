@@ -1,7 +1,7 @@
 from pyrogram.types import ForceReply
 import asyncio
 
-async def smod(c,msg,ask,placeholder = "Send required information...",timeout=30,msg_limit=150,stop_cmd = "/cancel"):
+async def smod(c,msg,ask,timeout=30,stop_cmd = "/cancel",placeholder = "Send required information...",msg_limit=150):
   try:
    ans = await asyncio.wait_for(wait(c,msg,ask,placeholder,msg_limit,stop_cmd),timeout= timeout)
   except Exception as e:
