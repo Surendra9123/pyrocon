@@ -30,7 +30,7 @@ Just put conv.py.file where you need to conv and
 #**Handle any kind of errors**
 
 ```
-  answer = await smod(c,msg,ask,timeout,stop_cmd)
+  answer = await smod(c,msg,ask)
   if answer.error:
     print(answer.error)
   ```
@@ -38,7 +38,7 @@ Just put conv.py.file where you need to conv and
 #**Handle timeout Errors**
 
 ```
-  answer = await smod(c,msg,ask,timeout,stop_cmd)
+  answer = await smod(c,msg,ask)
   if answer.timeout:
     print(answer.error)
   ```
@@ -46,7 +46,7 @@ Just put conv.py.file where you need to conv and
 #**Handle cancellation Errors**
 
 ```
-  answer = await smod(c,msg,ask,timeout,stop_cmd)
+  answer = await smod(c,msg,ask)
   if answer.cancel:
     print(answer.error)
   ```
