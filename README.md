@@ -6,7 +6,7 @@ Just put conv.py.file where you need to conv and
 
 ```from conv import smod```
 
-#```await smod(c,msg,ask,timeout,stop_cmd)```
+#```await smod(c,msg,ask,timeout,stop_cmd,placeholder)```
 
 ```c``` : required parameter ( Pyrogram Client )
 
@@ -18,6 +18,7 @@ Just put conv.py.file where you need to conv and
 
 ```stop_cmd``` : optional parameter (default to ```/cancel```)
 
+```placeholder``` : optional parameter (custom placeholder for Forcereply)
 #**using example:**
 
 ```  
