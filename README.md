@@ -2,6 +2,9 @@
 
 Conversation in pyrogram 
 
+Just put conv.py.file where you need to conv and
+
+```from conv import smod```
 
 #```await smod(c,msg,ask,timeout,stop_cmd)```
 
