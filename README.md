@@ -1,4 +1,4 @@
-# Pyrogram-Conversation
+# Pyrogram-Conversation {only for bots}
 
 Conversation in pyrogram 
 
