@@ -54,6 +54,9 @@ Just put conv.py.file where you need to conv and
     print(answer.cancel)
   ```
 
+Facts:
+
 #if successful answer is Message object otherwise an error
+#answer must be in reply to orginal message and should be a text message otherwise message will be ignored 
 
 
