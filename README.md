@@ -2,11 +2,9 @@
 
 Conversation in pyrogram 
 
-Just put conv.py.file where you need to conv and
+```from pyrocon import pyrocon```
 
-```from conv import smod```
-
-#```await smod(c,msg,ask,timeout,stop_cmd,placeholder)```
+#```await pyrocon.ask(c,msg,ask,timeout,stop_cmd,placeholder)```
 
 ```c``` : "Client" required parameter ( Pyrogram Client )
 
@@ -24,7 +22,7 @@ Just put conv.py.file where you need to conv and
 #**using example:**
 
 ```  
-  answer = await smod(c,msg,ask)
+  answer = await pyrocon.ask(c,msg,ask)
   if not answer.error:
     print(answer.text)
   ```
@@ -33,7 +31,7 @@ Just put conv.py.file where you need to conv and
 #**Handle any kind of errors**
 
 ```
-  answer = await smod(c,msg,ask)
+  answer = await pyrocon.ask(c,msg,ask)
   if answer.error:
     print(answer.error)
   ```
@@ -41,7 +39,7 @@ Just put conv.py.file where you need to conv and
 #**Handle timeout Errors**
 
 ```
-  answer = await smod(c,msg,ask)
+  answer = await pyrocon.ask(c,msg,ask)
   if answer.timeout:
     print(answer.timeout)
   ```
@@ -49,7 +47,7 @@ Just put conv.py.file where you need to conv and
 #**Handle cancellation Errors**
 
 ```
-  answer = await smod(c,msg,ask)
+  answer = await pyrocon.ask(c,msg,ask)
   if answer.cancel:
     print(answer.cancel)
   ```
