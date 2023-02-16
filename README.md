@@ -27,8 +27,9 @@ Conversation in pyrogram
 
 ```  
   answer = await pyrocon.ask(c,msg,ask)
-  if not answer.error:
+  if answer.text:
     print(answer.text)
+  answer.reply("I got answer..")
   ```
 
 
