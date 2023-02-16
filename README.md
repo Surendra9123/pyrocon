@@ -1,3 +1,7 @@
+install pyrocon with with pip using command
+
+```pip3 install pyrocon```
+
 # Pyrogram-Conversation {only for bots}
 
 Conversation in pyrogram 
