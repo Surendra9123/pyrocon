@@ -13,15 +13,15 @@ class serrors:
    class timeout:
      code = 100
      text = None
-     timeout,error = "[100] Time Out!"
+     timeout = error = "[100] Time Out!"
    class anon:
      code = 101
      text = None
-     anon,error = "[101] Anonymous users can't be used this module...!"
+     anon = error = "[101] Anonymous users can't be used this module...!"
    class cancel:
      code = 102
      text = None
-     cancel,error = "[102] Listening cancelled...!"
+     cancel = error = "[102] Listening cancelled...!"
       
 async def wait(c,msg,ask,placeholder,msg_limit,stop_cmd):
  try:
