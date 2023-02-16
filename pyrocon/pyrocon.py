@@ -10,16 +10,20 @@ class pyrocon:
       logging.info("Time Out!")
       ans = pyrocon.serrors.timeout
      return ans
+
   class serrors:
      class timeout:
-       code,text,anon,cancel = 100,None,False,False
+       code,text,anon,cancel,unknown = 100,None,False,False,False 
        timeout = error = "[100] Time Out!"
      class anon:
-       code,text,timeout,cancel = 101,None,False,False
+       code,text,timeout,cancel,unknown = 101,None,False,False,False 
        anon = error = "[101] Anonymous users can't be used this module...!"
      class cancel:
-       code,text,timeout,anon = 102,None,False,False
+       code,text,timeout,anon,unknown = 102,None,False,False,False
        cancel = error = "[102] Listening cancelled...!"
+     class unknown:
+       code,text,timeout,anon,cancel = 103,None,False,False,False
+       unknown = error = "[103] Unknown Error...!"
       
   async def wait(c,msg,ask,placeholder,msg_limit,stop_cmd):
    try:
@@ -33,7 +37,7 @@ class pyrocon:
      try:
       ids = [uv.id+x for x in range(msg_limit)]
       for ans in (await c.get_messages(uv.chat.id,ids)):
-        ans.error = True
+        ans.error = pyrocon.serrors.unknown
         try:
           user_id2 = ans.from_user.id
         except:
