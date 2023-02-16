@@ -3,11 +3,8 @@ from pyrogram import filters,Client
 import time
 bot = "token616dnddndzYVo"
 from pyrogram.types import Message
-app = Client("exxam",api_id=732605,api_hash="59c30695447fdb83a89016571ba9eb9d")
+app = Client("znznxn",api_id=73962605,api_hash="59csgnshmhm30695447fdb83a89016571ba9eb9d")
 
-
-
-#smod(c,msg,ask,placeholder = "Send required information...",timeout=30,msg_limit=150,stop_cmd = "/cancel")
 
 from conv import smod
 
