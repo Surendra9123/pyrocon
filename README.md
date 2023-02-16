@@ -8,17 +8,17 @@ Just put conv.py.file where you need to conv and
 
 #```await smod(c,msg,ask,timeout,stop_cmd,placeholder)```
 
-```c``` : required parameter ( Pyrogram Client )
+```c``` : "Client" required parameter ( Pyrogram Client )
 
-```msg``` : request parameter (Msg where to start conv..)
+```msg``` : "Message" request parameter (Msg where to start conv..)
 
-```ask``` : required parameter (Question to ask)
+```ask``` : "str" required parameter (Question to ask)
 
-```timeout``` : optional parameter (default to 30 sec)
+```timeout``` : "int" optional parameter (default to 30 sec)
 
-```stop_cmd``` : optional parameter (default to ```/cancel```)
+```stop_cmd``` : "str" optional parameter (default to ```/cancel```)
 
-```placeholder``` : optional parameter (custom placeholder for Forcereply)
+```placeholder``` : "str" optional parameter (custom placeholder for Forcereply)
 
 
 #**using example:**
