@@ -51,6 +51,6 @@ Just put conv.py.file where you need to conv and
     print(answer.error)
   ```
 
-
+#if successful answer is Message object otherwise an error
 
 
