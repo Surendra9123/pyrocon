@@ -28,12 +28,12 @@ Just put conv.py.file where you need to conv and
 
 **Handle any kind of errors**
 
-```
+``
    answer = await smod(c,msg,ask,timeout,stop_cmd)
    if answer.error:
      print(answer.error)
 
-```
+``
 
 **Handle timeout Errors**
 
