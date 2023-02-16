@@ -25,7 +25,9 @@ Conversation in pyrogram
 
 #**using example:**
 
-```  
+```
+  from pyrocon import pyrocon
+
   answer = await pyrocon.ask(c,msg,ask)
   if answer.text:
     print(answer.text)
@@ -36,6 +38,8 @@ Conversation in pyrogram
 #**Handle any kind of errors**
 
 ```
+  from pyrocon import pyrocon
+
   answer = await pyrocon.ask(c,msg,ask)
   if answer.error:
     print(answer.error)
@@ -44,6 +48,8 @@ Conversation in pyrogram
 #**Handle timeout Errors**
 
 ```
+  from pyrocon import pyrocon
+
   answer = await pyrocon.ask(c,msg,ask)
   if answer.timeout:
     print(answer.timeout)
@@ -52,6 +58,8 @@ Conversation in pyrogram
 #**Handle cancellation Errors**
 
 ```
+  from pyrocon import pyrocon
+
   answer = await pyrocon.ask(c,msg,ask)
   if answer.cancel:
     print(answer.cancel)
