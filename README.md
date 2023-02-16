@@ -38,18 +38,18 @@ Just put conv.py.file where you need to conv and
 #**Handle timeout Errors**
 
 ```
-   answer = await smod(c,msg,ask,timeout,stop_cmd)
-   if answer.timeout:
-     print(answer.error)```
+  answer = await smod(c,msg,ask,timeout,stop_cmd)
+  if answer.timeout:
+    print(answer.error)
+  ```
 
-**Handle cancellation Errors**
-
-```
-   answer = await smod(c,msg,ask,timeout,stop_cmd)
-   if answer.cancel:
-     print(answer.error)
+#**Handle cancellation Errors**
 
 ```
+  answer = await smod(c,msg,ask,timeout,stop_cmd)
+  if answer.cancel:
+    print(answer.error)
+  ```
 
 
 
