@@ -43,7 +43,7 @@ Just put conv.py.file where you need to conv and
 ```
   answer = await smod(c,msg,ask)
   if answer.timeout:
-    print(answer.error)
+    print(answer.timeout)
   ```
 
 #**Handle cancellation Errors**
