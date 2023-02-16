@@ -13,18 +13,15 @@ class serrors:
    class timeout:
      code = 100
      text = None
-     timeout = "[100] Time Out!"
-     error = "[100] Time Out!"
+     timeout,error = "[100] Time Out!"
    class anon:
      code = 101
      text = None
-     anon = "[101] Anonymous users can't be used this module...!"
-     error = "[101] Anonymous users can't be used this module...!"
+     anon,error = "[101] Anonymous users can't be used this module...!"
    class cancel:
      code = 102
      text = None
-     cancel = "[102] Listening cancelled...!"
-     error = "[102] Listening cancelled...!"
+     cancel,error = "[102] Listening cancelled...!"
       
 async def wait(c,msg,ask,placeholder,msg_limit,stop_cmd):
  try:
@@ -48,9 +45,7 @@ async def wait(c,msg,ask,placeholder,msg_limit,stop_cmd):
       if ans and (not ans.empty) and ans.text and ans.reply_to_message and (user_id2 == user_id) and (ans.reply_to_message.id == uv.id) and ans.reply_to_message.reply_markup and ans.reply_to_message.reply_markup.placeholder and (ans.reply_to_message.reply_markup.placeholder == placeholder):
        ans.error = None
        break
-    if not ans.error:
-     break
-    if ans == serrors.cancel:
+    if (not ans.error) or (ans == serrors.cancel):
      break
    except Exception as e:
     print(e) 
