@@ -43,7 +43,7 @@ async def wait(c,msg,ask,placeholder,msg_limit,stop_cmd):
        ans = serrors.cancel
        break
       if ans and (not ans.empty) and ans.text and ans.reply_to_message and (user_id2 == user_id) and (ans.reply_to_message.id == uv.id) and ans.reply_to_message.reply_markup and ans.reply_to_message.reply_markup.placeholder and (ans.reply_to_message.reply_markup.placeholder == placeholder):
-       ans.error = None
+       ans.error = ans.cancel = ans.timeout = ans.anon = False
        break
     if (not ans.error) or (ans == serrors.cancel):
      break
