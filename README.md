@@ -20,10 +20,10 @@ Just put conv.py.file where you need to conv and
 
 #**using example:**
 
-```
+``
   answer = await smod(c,msg,ask,timeout,stop_cmd)
   if not answer.error:
-    print(answer.text)
+    print(answer.text)``
 
 #**Handle any kind of errors**
 
