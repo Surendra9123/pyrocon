@@ -48,7 +48,7 @@ Just put conv.py.file where you need to conv and
 ```
   answer = await smod(c,msg,ask)
   if answer.cancel:
-    print(answer.error)
+    print(answer.cancel)
   ```
 
 #if successful answer is Message object otherwise an error
