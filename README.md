@@ -6,9 +6,9 @@ install pyrocon with with pip using command
 
 Conversation in pyrogram 
 
-```from pyrocon import pyrocon```
+```from pyrocon import quiz```
 
-#```await pyrocon.ask(c,msg,ask,timeout,stop_cmd,placeholder)```
+#```await quiz.ask(c,msg,ask,timeout,stop_cmd,placeholder)```
 
 ```c``` : "Client" required parameter ( Pyrogram Client )
 
@@ -26,9 +26,9 @@ Conversation in pyrogram
 #**using example:**
 
 ```
-  from pyrocon import pyrocon
+  from pyrocon import quiz
 
-  answer = await pyrocon.ask(c,msg,ask)
+  answer = await quiz.ask(c,msg,ask)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
@@ -38,9 +38,9 @@ Conversation in pyrogram
 #**Handle any kind of errors**
 
 ```
-  from pyrocon import pyrocon
+  from pyrocon import quiz
 
-  answer = await pyrocon.ask(c,msg,ask)
+  answer = await quiz.ask(c,msg,ask)
   if answer.error:
     print(answer.error)
   ```
@@ -48,9 +48,9 @@ Conversation in pyrogram
 #**Handle timeout Errors**
 
 ```
-  from pyrocon import pyrocon
+  from pyrocon import quiz
 
-  answer = await pyrocon.ask(c,msg,ask)
+  answer = await quiz.ask(c,msg,ask)
   if answer.timeout:
     print(answer.timeout)
   ```
@@ -58,9 +58,9 @@ Conversation in pyrogram
 #**Handle cancellation Errors**
 
 ```
-  from pyrocon import pyrocon
+  from pyrocon import quiz
 
-  answer = await pyrocon.ask(c,msg,ask)
+  answer = await quiz.ask(c,msg,ask)
   if answer.cancel:
     print(answer.cancel)
   ```
