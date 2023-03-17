@@ -1,6 +1,6 @@
 install pyrocon using pip
 
-```pip3 install pyrocon```
+```pip3 install -U pyrocon```
 
 #Conversation in pyrogram 
 
