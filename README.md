@@ -1,3 +1,7 @@
+install pyrocon using pip
+
+```pip3 install pyrocon```
+
 #Conversation in pyrogram 
 
 ```from pyrocon import quiz```
