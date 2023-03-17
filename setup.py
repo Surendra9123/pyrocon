@@ -7,15 +7,15 @@ pkg2 = os.getcwd()
 print(read('README.md'))
 setup(
     name = "",
-    version = "1.0.6",
+    version = "1.6.0",
     author = "SPiDER",
     author_email = "mindajitendra63@gmail.com",
-    description = ("Easy conversation handler for pyrogram mtproto library {for bots only}"),
+    description = ("Easy conversation handler for pyrogram mtproto library..."),
     license = "BSD",
     keywords = "example documentation tutorial",
     long_description = read('README.md'),
     long_description_content_type='text/markdown',
-    url = "https://github.com/Surendra9123/Pyrogram-Conversation",
+    url = "https://github.com/Surendra9123/Pyrocon",
     packages=["pyrocon"],
     classifiers=[
         "Development Status :: 3 - Alpha",
