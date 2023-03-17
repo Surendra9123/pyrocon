@@ -3,6 +3,7 @@ import asyncio
 import logging
 from .errors import errors
 from pyrogram import Client,filters
+from pyrogram.filters import Filter
 
 class quiz:
   async def ask(client,update,ask,timeout=30,cquery=False,filter=False,stop_cmd = "/cancel",placeholder = "Send required information...",msg_limit=80):
@@ -31,9 +32,9 @@ class quiz:
      if not isinstance(placeholder,str):
         print("8th parameter/placeholder must be str")
         return errors.basic
-#     if not (isinstance(filter,bool) or isinstance(filter,filters)):
-#        print("6th parameter/filter must be filter object")
-#        return errors.basic
+     if not (isinstance(filter,bool) or isinstance(filter,Filter)):
+        print("6th parameter/filter must be filter object")
+        return errors.basic
      try:
       ans = await asyncio.wait_for(quiz.wait(client,update,ask,placeholder,msg_limit,stop_cmd,cquery,filter),timeout= timeout)
      except Exception as e:
