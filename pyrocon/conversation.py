@@ -8,11 +8,11 @@ from pyrogram.filters import Filter
 class patch():
   def __init__(self,
                client : Client,
+               clear: bool = False,
                timeout : int = 30,
                stop_cmd : str = "/cancel",
                placeholder : str = "Send required information...",
-               msg_limit : int = 80,
-               clear : bool = False
+               msg_limit : int = 80
                ):
       if not isinstance(client, Client):
           print("Parameter client must be pyrogram Client object")
