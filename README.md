@@ -40,7 +40,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
 
 #**using example:**
 
-**Create quiz instance**
+#**Create quiz instance**
 ```
   from pyrocon import patch
   from pyrogram import Client,filters
@@ -59,7 +59,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
 ```
 
 
-**handle text messages**
+#**handle text messages**
 
 ```
   answer = await quiz.ask(message,text)
@@ -68,7 +68,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   await answer.reply("I got answer..")
   ```
 
-**handle CallbackQuery / inline buttons**
+#**handle CallbackQuery / inline buttons**
 
 ```
   answer = await quiz.ask(CallbacQuery,text,cquery=True)
@@ -77,7 +77,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   await answer.reply("I got answer..")
   ```
 
-**Using pyrogram filters**
+#**Using pyrogram filters**
 
  __single filter__ 
 
