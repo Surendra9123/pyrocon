@@ -3,6 +3,7 @@ from pyrogram import filters,Client
 from pyrocon import patch
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup,ChatPermissions
 
+bot = "token"
 app = Client("blt",api_id = 14407,api_hash = "118d6b2b4ef7c4149f3d4",bot_token=bot)
 quiz = patch(app,clear=True)
 
