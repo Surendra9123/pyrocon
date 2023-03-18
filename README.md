@@ -47,11 +47,15 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   
   app = Client(...)
   quiz = patch(app)
-  
-  answer = await quiz.ask(message,text)
-  if answer.text:
-    print(answer.text)
-  await answer.reply("I got answer..")
+
+  @app.on_message(..)  
+  async def _(client,message):
+   answer = await quiz.ask(message,text)
+    if answer.text:
+     print(answer.text)
+    await answer.reply("I got answer..")
+
+  app.run()
 ```
 
 
