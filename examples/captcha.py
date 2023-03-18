@@ -37,11 +37,10 @@ async def clear(client,message):
     except Exception as a:
       await message.reply(a)
       return
-    await ans.reply(f"Successful! and approved in {chat.title}")
+    await ans.reply("Successful approved! Now you can chat in Group ✔️")
   else:
     await ans.reply("Try again..!")
  else:
      #anything else
      pass
-
 app.run()
