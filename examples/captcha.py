@@ -32,7 +32,11 @@ async def clear(client,message):
   c = a + b
   ans = await quiz.ask(message,f"**what is {a} + {b}?**")
   if ans.text == str(c):
-    await client.restrict_chat_member(chat_id,message.from_user.id,ChatPermissions(can_send_messages=True))
+    try:
+      await client.restrict_chat_member(chat_id,message.from_user.id,ChatPermissions(can_send_messages=True))
+    except Exception as a:
+      await message.reply(a)
+      return
     await ans.reply(f"Successful! and approved in {chat.title}")
   else:
     await ans.reply("Try again..!")
