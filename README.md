@@ -14,13 +14,9 @@ install pyrocon using pip
 
 ```timeout``` : "int" optional parameter (Default to 30 sec)
 
-```cquery``` : "bool" parameter set True when asking with inline buttons (Default to ```False```)
-
 ```stop_cmd``` : "str" optional parameter (Default to ```/cancel```)
 
 ```placeholder``` : "str" optional parameter (Custom placeholder for Forcereply)
-
-```filter``` : pyrogram filters optional parameter (Default to filters.text)
 
 
 #```patch.ask(update,text,cquery,filter)```
