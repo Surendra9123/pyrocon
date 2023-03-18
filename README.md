@@ -60,7 +60,7 @@ install pyrocon using pip
   print(answer.photo)
 
   ```
- __multiple filters__
+ __multiple filters (same as pyrogram)__
 
 ```
   from pyrocon import quiz
