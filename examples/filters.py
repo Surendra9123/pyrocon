@@ -9,6 +9,6 @@ quiz = patch(app,clear=True)
 @app.on_message(filters.command("start"))  
 async def clear(client,message):
     answer = await quiz.ask(message,"How are you bro?", filter=(filters.photo & filters.group))
-    await answer.reply(f"your answer is {ans.text}")
+    print(filters.photo)
 
 app.run()
