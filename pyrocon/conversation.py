@@ -88,21 +88,16 @@ class patch():
              ans = await asyncio.wait_for(patch.wait(self, uv, anonymous, user_id, filter),
                                           timeout=self.timeout
                                           )
-             if self.delete_msg:
-              try:
-               await uv.delete()
-              except:
-               pass
          else:
              return errors.unknown
      except Exception as e:
-      try:
-        if self.delete_msg:
-          await uv.delete()
-      except:
-          pass
       logging.info("Time Out!")
       ans = errors.timeout
+     try:
+      if self.delete_msg:
+        await uv.delete()
+     except:
+      pass
      return ans
 
 
