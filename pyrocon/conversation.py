@@ -89,7 +89,10 @@ class patch():
                                           timeout=self.timeout
                                           )
              if self.delete_msg:
-              await uv.delete()
+              try:
+               await uv.delete()
+              except:
+               pass
          else:
              return errors.unknown
      except Exception as e:
