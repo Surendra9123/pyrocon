@@ -45,7 +45,7 @@ install pyrocon using pip
   from pyrogram import Client,filters
   
   app = Client(...)
-  quiz = (app)
+  quiz = patch(app)
   
   answer = await quiz.ask(message,text)
   if answer.text:
