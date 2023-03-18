@@ -38,7 +38,7 @@ class patch():
 
   async def ask(self,
                 update : Message or CallbackQuery,
-                ask : str,
+                text : str,
                 cquery : bool = False,
                 filter : Filter = False
                 ):
@@ -52,8 +52,8 @@ class patch():
         else:
          print("Parameter update must be Message object")
          return errors.basic      
-     if not isinstance(ask,str):
-        print("Parameter ask must be str")
+     if not isinstance(text,str):
+        print("Parameter text must be str")
         return errors.basic
      if not (isinstance(filter,bool) or isinstance(filter,Filter)):
         print("Parameter filter must be pyrogram filters object")
@@ -72,14 +72,14 @@ class patch():
          if user_id:
              if cquery:
                  uv = await self.client.send_message(chat_id=update.message.chat.id,
-                                                     text=ask,
+                                                     text=text,
                                                      reply_markup=ForceReply(
                                                                              selective = True,
                                                                              placeholder = self.placeholder
                                                                             )
                                                      )
              else:
-                 uv = await update.reply(text = ask,
+                 uv = await update.reply(text = text,
                                          reply_to_message_id = update.id,
                                          reply_markup=ForceReply(selective = True,
                                                                  placeholder = self.placeholder
