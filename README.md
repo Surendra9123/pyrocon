@@ -4,28 +4,45 @@ install pyrocon using pip
 
 #Conversation in pyrogram 
 
+
+
 ```from pyrocon import patch```
 
 #```patch(client,clear,timeout,stop_cmd,placeholder)```
 
 ```client``` : "Client" required parameter ( Pyrogram Client )
 
+
 ```clear``` : "bool" required parameter set true if you want delete msg after get answer(Default to False)
+
 
 ```timeout``` : "int" optional parameter (Default to 30 sec)
 
+
 ```stop_cmd``` : "str" optional parameter (Default to ```/cancel```)
 
+
 ```placeholder``` : "str" optional parameter (Custom placeholder for Forcereply)
+
+
+
+
+
+
+
+
 
 
 #```patch.ask(update,text,cquery,filter)```
 
 ```update``` : "Message/CallbacQuery" required parameter (Where to start conv..)
 
+
 ```text``` : "str" Required parameter (Question to ask)
 
+
 ```cquery``` : "bool" Parameter set True when asking with inline buttons (Default to ```False```)
+
 
 ```filter``` : Pyrogram filters optional parameter (Default to filters.text)
 
@@ -34,6 +51,8 @@ install pyrocon using pip
 
 
 #**using example:**
+
+
 
 **Create quiz instance**
 ```
@@ -50,6 +69,8 @@ install pyrocon using pip
 ```
 
 
+
+
 **handle text messages**
 
 ```
@@ -59,6 +80,9 @@ install pyrocon using pip
   await answer.reply("I got answer..")
   ```
 
+
+
+
 **handle CallbackQuery / inline buttons**
 
 ```
@@ -67,6 +91,9 @@ install pyrocon using pip
     print(answer.text)
   await answer.reply("I got answer..")
   ```
+
+
+
 
 **Using pyrogram filters**
 
@@ -79,7 +106,8 @@ install pyrocon using pip
   print(answer.photo)
 
   ```
- __multiple filters (same as pyrogram)__
+ 
+__multiple filters (same as pyrogram)__
 
 ```
   from pyrogram import filters
@@ -90,6 +118,8 @@ install pyrocon using pip
   ```
 
 
+
+
 #**Handle any kind of errors**
 
 ```
@@ -97,6 +127,7 @@ install pyrocon using pip
   if answer.error:
     print(answer.error)
   ```
+
 
 #**Handle timeout Errors**
 
@@ -106,6 +137,7 @@ install pyrocon using pip
     print(answer.timeout)
   ```
 
+
 #**Handle cancellation Errors**
 
 ```
@@ -113,6 +145,10 @@ install pyrocon using pip
   if answer.cancel:
     print(answer.cancel)
   ```
+
+
+
+
 
 Facts:
 
