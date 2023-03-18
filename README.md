@@ -88,7 +88,7 @@ install pyrocon using pip
 ```
   from pyrogram import filters
 
-  answer = await quiz.ask(update,ask,filter=(filters.photo & filters.group))
+  answer = await quiz.ask(update,text,filter=(filters.photo & filters.group))
   print(answer.photo)
 
   ```
