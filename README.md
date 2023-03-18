@@ -6,7 +6,7 @@ install pyrocon using pip
 
 ```from pyrocon import patch```
 
-** patch(client, clear, timeout, stop_cmd, placeholder)**
+ *patch(client, clear, timeout, stop_cmd, placeholder)*
 
 __client__ : 'Client' required parameter ( Pyrogram Client )
 
