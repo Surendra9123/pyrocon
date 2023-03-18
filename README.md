@@ -51,7 +51,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
 ```
 
 
@@ -61,7 +61,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
   ```
 
 **handle CallbackQuery / inline buttons**
@@ -70,7 +70,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
   answer = await quiz.ask(CallbacQuery,text,cquery=True)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
   ```
 
 **Using pyrogram filters**
@@ -124,4 +124,5 @@ Facts:
 #if successful answer is Message object otherwise an error
 
 #answer must be in reply to orginal message and should be a text message otherwise message will be ignored 
+
 
