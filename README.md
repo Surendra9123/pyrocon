@@ -6,7 +6,7 @@ install pyrocon using pip
 
 ```from pyrocon import patch```
 
-#**patch(client,clear,timeout,stop_cmd,placeholder)**
+** patch(client, clear, timeout, stop_cmd, placeholder)**
 
 __client__ : 'Client' required parameter ( Pyrogram Client )
 
@@ -22,7 +22,7 @@ __placeholder__ : 'str' optional parameter (Custom placeholder for Forcereply)
 ============================================================
 
 
-#**patch.ask(update,text,cquery,filter)**
+** patch.ask(update, text, cquery, filter)**
 
 __update__ : 'Message/CallbacQuery' required parameter (Where to start conv..)
 
@@ -122,3 +122,4 @@ Facts:
 #if successful answer is Message object otherwise an error
 
 #answer must be in reply to orginal message and should be a text message otherwise message will be ignored 
+
