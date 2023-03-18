@@ -7,7 +7,7 @@ pkg2 = os.getcwd()
 print(read('README.md'))
 setup(
     name = "",
-    version = "2.0.4",
+    version = "2.0.5",
     author = "SPiDER",
     author_email = "mindajitendra63@gmail.com",
     description = ("Easy conversation handler for pyrogram mtproto library..."),
