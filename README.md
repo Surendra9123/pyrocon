@@ -50,7 +50,7 @@ install pyrocon using pip
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
 ```
 
 
@@ -60,7 +60,7 @@ install pyrocon using pip
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
   ```
 
 **handle CallbackQuery / inline buttons**
@@ -69,7 +69,7 @@ install pyrocon using pip
   answer = await quiz.ask(CallbacQuery,text,cquery=True)
   if answer.text:
     print(answer.text)
-  answer.reply("I got answer..")
+  await answer.reply("I got answer..")
   ```
 
 **Using pyrogram filters**
