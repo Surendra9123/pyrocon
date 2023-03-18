@@ -8,6 +8,7 @@ install pyrocon using pip
 
 ```from pyrocon import patch```
 
+============================================================
 #
  
 ``` patch(client, clear, timeout, stop_cmd, placeholder ) ```
@@ -50,6 +51,7 @@ install pyrocon using pip
 
 
 
+============================================================
 
 #**using example:**
 
