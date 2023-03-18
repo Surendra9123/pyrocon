@@ -8,7 +8,7 @@ from pyrogram.filters import Filter
 class patch():
   def __init__(self,
                client : Client,
-               clear: bool = False,
+               clear : bool = False,
                timeout : int = 30,
                stop_cmd : str = "/cancel",
                placeholder : str = "Send required information...",
