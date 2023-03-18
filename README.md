@@ -4,58 +4,39 @@ install pyrocon using pip
 
 #Conversation in pyrogram 
 
-
-
 ```from pyrocon import patch```
 
-============================================================
-#
- 
-``` patch(client, clear, timeout, stop_cmd, placeholder ) ```
+#**patch(client,clear,timeout,stop_cmd,placeholder)**
 
-```client``` : "Client" required parameter ( Pyrogram Client )
+__client__ : 'Client' required parameter ( Pyrogram Client )
 
+__clear__ : 'bool' required parameter set true if you want delete msg after get answer(Default to False)
 
-```clear``` : "bool" required parameter set true if you want delete msg after get answer(Default to False)
+__timeout__ : 'int' optional parameter (Default to 30 sec)
 
+__stop_cmd__ : 'str' optional parameter (Default to __/cancel__)
 
-```timeout``` : "int" optional parameter (Default to 30 sec)
-
-
-```stop_cmd``` : "str" optional parameter (Default to ```/cancel```)
-
-
-```placeholder``` : "str" optional parameter (Custom placeholder for Forcereply)
-
+__placeholder__ : 'str' optional parameter (Custom placeholder for Forcereply)
 
 
 ============================================================
 
 
+#**patch.ask(update,text,cquery,filter)**
 
+__update__ : 'Message/CallbacQuery' required parameter (Where to start conv..)
 
+__text__ : 'str' Required parameter (Question to ask)
 
-#``` patch.ask(update, text, cquery, filter) ```
+__cquery__ : 'bool' Parameter set True when asking with inline buttons (Default to __False__)
 
-```update``` : "Message/CallbacQuery" required parameter (Where to start conv..)
-
-
-```text``` : "str" Required parameter (Question to ask)
-
-
-```cquery``` : "bool" Parameter set True when asking with inline buttons (Default to ```False```)
-
-
-```filter``` : Pyrogram filters optional parameter (Default to filters.text)
-
-
+__filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
 
 
 ============================================================
+
 
 #**using example:**
-
-
 
 **Create quiz instance**
 ```
@@ -68,10 +49,8 @@ install pyrocon using pip
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  await answer.reply("I got answer..")
+  answer.reply("I got answer..")
 ```
-
-
 
 
 **handle text messages**
@@ -80,11 +59,8 @@ install pyrocon using pip
   answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
-  await answer.reply("I got answer..")
+  answer.reply("I got answer..")
   ```
-
-
-
 
 **handle CallbackQuery / inline buttons**
 
@@ -92,11 +68,8 @@ install pyrocon using pip
   answer = await quiz.ask(CallbacQuery,text,cquery=True)
   if answer.text:
     print(answer.text)
-  await answer.reply("I got answer..")
+  answer.reply("I got answer..")
   ```
-
-
-
 
 **Using pyrogram filters**
 
@@ -109,8 +82,7 @@ install pyrocon using pip
   print(answer.photo)
 
   ```
- 
-__multiple filters (same as pyrogram)__
+ __multiple filters (same as pyrogram)__
 
 ```
   from pyrogram import filters
@@ -121,8 +93,6 @@ __multiple filters (same as pyrogram)__
   ```
 
 
-
-
 #**Handle any kind of errors**
 
 ```
@@ -130,7 +100,6 @@ __multiple filters (same as pyrogram)__
   if answer.error:
     print(answer.error)
   ```
-
 
 #**Handle timeout Errors**
 
@@ -140,7 +109,6 @@ __multiple filters (same as pyrogram)__
     print(answer.timeout)
   ```
 
-
 #**Handle cancellation Errors**
 
 ```
@@ -149,14 +117,8 @@ __multiple filters (same as pyrogram)__
     print(answer.cancel)
   ```
 
-
-
-
-
 Facts:
 
 #if successful answer is Message object otherwise an error
 
 #answer must be in reply to orginal message and should be a text message otherwise message will be ignored 
-
-
