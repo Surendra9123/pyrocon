@@ -23,7 +23,7 @@ async def clear(client,message):
   text = None
  if text and text[0] == "captcha":
   try:
-    chat = await app.get_chat(chat_id)
+    chat = await app.get_chat_member(chat_id,message.from_user.id)
   except Exception as a:
     await message.reply(a)
     return
