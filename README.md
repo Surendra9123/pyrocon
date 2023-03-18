@@ -47,7 +47,7 @@ install pyrocon using pip
   app = Client(...)
   quiz = (app)
   
-  answer = await quiz.ask(message,ask)
+  answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
@@ -57,7 +57,7 @@ install pyrocon using pip
 **handle text messages**
 
 ```
-  answer = await quiz.ask(message,ask)
+  answer = await quiz.ask(message,text)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
@@ -66,7 +66,7 @@ install pyrocon using pip
 **handle CallbackQuery / inline buttons**
 
 ```
-  answer = await quiz.ask(CallbacQuery,ask,cquery=True)
+  answer = await quiz.ask(CallbacQuery,text,cquery=True)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
@@ -79,7 +79,7 @@ install pyrocon using pip
 ```
   from pyrogram import filters
 
-  answer = await quiz.ask(update,ask,filter=filters.photo)
+  answer = await quiz.ask(update,text,filter=filters.photo)
   print(answer.photo)
 
   ```
@@ -97,7 +97,7 @@ install pyrocon using pip
 #**Handle any kind of errors**
 
 ```
-  answer = await quiz.ask(update,ask)
+  answer = await quiz.ask(update,text)
   if answer.error:
     print(answer.error)
   ```
@@ -105,7 +105,7 @@ install pyrocon using pip
 #**Handle timeout Errors**
 
 ```
-  answer = await quiz.ask(update,ask)
+  answer = await quiz.ask(update,text)
   if answer.timeout:
     print(answer.timeout)
   ```
@@ -113,7 +113,7 @@ install pyrocon using pip
 #**Handle cancellation Errors**
 
 ```
-  answer = await quiz.ask(update,ask)
+  answer = await quiz.ask(update,text)
   if answer.cancel:
     print(answer.cancel)
   ```
