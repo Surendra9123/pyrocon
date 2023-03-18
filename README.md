@@ -50,7 +50,7 @@ __filter__ : Pyrogram filters optional parameter (Default to __filters.text__)
 
   @app.on_message(..)  
   async def _(client,message):
-   answer = await quiz.ask(message,text)
+    answer = await quiz.ask(message,text)
     if answer.text:
      print(answer.text)
     await answer.reply("I got answer..")
