@@ -4,45 +4,69 @@ install pyrocon using pip
 
 #Conversation in pyrogram 
 
-```from pyrocon import quiz```
+```from pyrocon import patch```
 
-#```await quiz.ask(c,msg,ask,timeout,stop_cmd,placeholder)```
+#```patch(client,clear,timeout,stop_cmd,placeholder)```
 
 ```client``` : "Client" required parameter ( Pyrogram Client )
 
-```update``` : Message/CallbacQuery request parameter (where to start conv..)
+```clear``` : "bool" required parameter set true if you want delete msg after get answer(Default to False)
 
-```ask``` : "str" required parameter (Question to ask)
+```timeout``` : "int" optional parameter (Default to 30 sec)
 
-```timeout``` : "int" optional parameter (default to 30 sec)
+```cquery``` : "bool" parameter set True when asking with inline buttons (Default to ```False```)
 
-```cquery``` : "bool" parameter set True when asking with inline buttons (default to ```False```)
+```stop_cmd``` : "str" optional parameter (Default to ```/cancel```)
 
-```stop_cmd``` : "str" optional parameter (default to ```/cancel```)
+```placeholder``` : "str" optional parameter (Custom placeholder for Forcereply)
 
-```placeholder``` : "str" optional parameter (custom placeholder for Forcereply)
+```filter``` : pyrogram filters optional parameter (Default to filters.text)
 
-```filter``` : pyrogram filters optional parameter (default to filters.text)
+
+#```patch.ask(update,text,cquery,filter)```
+
+```update``` : "Message/CallbacQuery" required parameter (Where to start conv..)
+
+```text``` : "str" Required parameter (Question to ask)
+
+```cquery``` : "bool" Parameter set True when asking with inline buttons (Default to ```False```)
+
+```filter``` : Pyrogram filters optional parameter (Default to filters.text)
+
+
+
 
 
 #**using example:**
 
-**handle text messages**
+**Create quiz instance**
 ```
-  from pyrocon import quiz
+  from pyrocon import patch
+  from pyrogram import Client,filters
+  
+  app = Client(...)
+  quiz = (app)
+  
+  answer = await quiz.ask(message,ask)
+  if answer.text:
+    print(answer.text)
+  answer.reply("I got answer..")
+```
 
-  answer = await quiz.ask(c,message,ask)
+
+**handle text messages**
+
+```
+  answer = await quiz.ask(message,ask)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
   ```
+
 **handle CallbackQuery / inline buttons**
 
-
 ```
-  from pyrocon import quiz
-
-  answer = await quiz.ask(c,CallbacQuery,ask,cquery=True)
+  answer = await quiz.ask(CallbacQuery,ask,cquery=True)
   if answer.text:
     print(answer.text)
   answer.reply("I got answer..")
@@ -53,20 +77,18 @@ install pyrocon using pip
  __single filter__ 
 
 ```
-  from pyrocon import quiz
   from pyrogram import filters
 
-  answer = await quiz.ask(c,update,ask,filter=filters.photo)
+  answer = await quiz.ask(update,ask,filter=filters.photo)
   print(answer.photo)
 
   ```
  __multiple filters (same as pyrogram)__
 
 ```
-  from pyrocon import quiz
   from pyrogram import filters
 
-  answer = await quiz.ask(c,update,ask,filter=(filters.photo & filters.group))
+  answer = await quiz.ask(update,ask,filter=(filters.photo & filters.group))
   print(answer.photo)
 
   ```
@@ -75,9 +97,7 @@ install pyrocon using pip
 #**Handle any kind of errors**
 
 ```
-  from pyrocon import quiz
-
-  answer = await quiz.ask(c,update,ask)
+  answer = await quiz.ask(update,ask)
   if answer.error:
     print(answer.error)
   ```
@@ -85,9 +105,7 @@ install pyrocon using pip
 #**Handle timeout Errors**
 
 ```
-  from pyrocon import quiz
-
-  answer = await quiz.ask(c,update,ask)
+  answer = await quiz.ask(update,ask)
   if answer.timeout:
     print(answer.timeout)
   ```
@@ -95,9 +113,7 @@ install pyrocon using pip
 #**Handle cancellation Errors**
 
 ```
-  from pyrocon import quiz
-
-  answer = await quiz.ask(c,update,ask)
+  answer = await quiz.ask(update,ask)
   if answer.cancel:
     print(answer.cancel)
   ```
