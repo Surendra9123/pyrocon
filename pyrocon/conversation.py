@@ -12,7 +12,7 @@ class patch():
                timeout : int = 30,
                stop_cmd : str = "/cancel",
                placeholder : str = "Send required information...",
-               msg_limit : int = 80
+               msg_limit : int = 100
                ):
       if not isinstance(client, Client):
           print("Parameter client must be pyrogram Client object")
@@ -33,7 +33,7 @@ class patch():
       self.timeout : int = timeout
       self.stop_cmd : str = stop_cmd
       self.placeholder : str = placeholder
-      self.msg_limit : str = 100
+      self.msg_limit : int = msg_limit
       self.delete_msg : bool = clear
 
   async def ask(self,
